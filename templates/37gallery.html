@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery </title>
+    <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+
+<body class="body3">
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top" >
+
+<div class="container-fluid" id="schoolname">
+    <center>
+        <img src="{{ url_for('static',filename='image2/logo1.jpg')}}" height="50px" class="img img-rounded"
+        <h1><b>Lakshan International School</b></h1>
+    </center>
+</div>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand"> Lakshan School</a>
+        </div>
+       <ul class="nav navbar-nav">
+           <li ><a href="/Aboutus">About Us</a></li>
+           <li><a href="/Skilluplift">Skill Upliftment</a></li>
+           <li class="active" ><a href="/gallery">Photo Gallery</a></li>
+
+       <!__ dropdown Menu ___>
+
+           <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Extra-Curicular
+                   <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+
+                   <li><a href="/indoorgame">Indoor Games</a></li>
+                   <li><a href="/outdoorgames">Outdoorgames</a></li>
+                   <li><a href="/culturalmeets"> Miscellanous</a></li>
+               </ul>
+           </li>
+
+           <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  School
+                   <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+
+                   <li><a href="/Preprimary">Pre-Primary(kinder garten)</a></li>
+                   <li><a href="/primary">Primary (grade I-VIII)</a></li>
+                   <li><a href="/highschool">High School </a></li>
+               </ul>
+           </li>
+
+       </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">Home</a></li>
+            <li><a href="/Student_loginpage">Student Login</a></li>
+            <li><a href="/Admin_loginpage">Admin Login </a></li>
+        </ul>
+    </div>
+</nav> # nav ends here
+
+<div style="margin-top:80px;">
+<center><h1 class="size01">Lakshan International School <br> Gallery Page </h1> </center>
+</div>
+
+<div  class="col-md-7" >
+    <h2 class="size04">FACILITIES OF OUR SCHOOL</h2>
+    <h3 class="size03" id="linespace">
+        <ul style="list-style-type:square;">
+            <li>Striking schoolbuildings unified with lush green garden and &nbsp;&nbsp; lawns.  </li>
+            <li>Huge ,airy classrooms with cross aeration and natural light overlooking gardens  </li>
+            <li>State of art Science Lab,Mathematicss and Language Laboratory.</li>
+            <li> Amenities for indoor physical asctivities like table tennis,chess,board games.</li>
+            <li>Day care facility on request.</li>
+            <li>A big Auditorium with first rate acoustics.</li>
+            <li>Great Outdoor courts for volley ball,Basket ball,Football and throw ball. </li>
+            <li>Meditation centre and yoga centre. </li>
+            <li>Large rooms for art,craft,dance and music.</li>
+            <li>Huge and hygine dining hall.</li>
+            <li>School bus services to transport children to and from school. </li>
+        </ul>
+    </h3>
+
+</div>
+
+<div class="col-md-5" >
+    <div class="container07">
+        <br>
+        <center> <h2 class="size08" id="linespace"> Lakshan International School </h2></center>
+        <h3 class="size07" id="linespace">
+           This is a reputed a institution that plays a vital role in all set of fields,to make the student life pleasant and amazing. <br>
+        </h3>
+        <h3 class="size07" id="linespace">
+            1.Provides all facilities to studemts. <br>
+            2.Certified 9001:2008 certified institution.      <br>
+            3.Provided A+ grade in Accredation.    <br>
+            4.We provide high-tech lab facilities. <br>
+            <br>
+        </h3>
+        <center><img src="static/image2/study1.gif" alt="study1" ></center>
+        <br>
+    </div>      <!__ container 07 ends here ___>
+</div>            <!__ col-md 5 ends here ___>
+
+<center><h1 class="size04">Our School Album</h1></center>
+<hr class="new1">
+<h2 class="size02">Our Classroom</h2>
+
+<img src="static/image4/class1.jpg" alt="class1" > <span class="tab1"></span>
+<img src="static/image4/class5.jpg" alt="class5" >
+<img src="static/image4/class6.jpg" alt="class6" width="400px;" height="250px;" >
+<img src="static/image4/class2.jpg" alt="class2" >   <span class="tab1"></span>
+<img src="static/image4/class3.jpg" alt="class3" >   <span class="tab1"></span>
+<img src="static/image4/class4.jpg" alt="class4" >
+
+
+<!__ 3rd column  ___>
+<div  class="col-md-offset-1 col-md-3">
+
+</div>
+
+
+<hr class="new1">
+<h2 class="size02">Our Laboratory </h2>
+
+<img src="static/image4/class7.jpg" alt="class1" >          <span class="tab"></span>
+<img src="static/image4/class8.jpg" alt="class1" >          <span class="tab"></span>
+<img src="static/image4/class17.jpg" alt="class1" >
+
+<img src="static/image4/class18.jpg" alt="class1" >          <span class="tab"></span>
+<img src="static/image4/class19.jpg" alt="class1" >          <span class="tab"></span>
+<img src="static/image4/pic34.jpg" alt="class1" >
+
+
+<hr class="new1">
+<h2 class="size02">Our Hostel Study room </h2>
+
+
+<img src="static/image4/class14.jpg" alt="class1" >          <span class="tab"></span>
+<img src="static/image4/class13.jpg" alt="class1"   height="300px;  >     <span class="tab"></span> <span class="tab"></span>
+<img src="static/image4/class9.jpg" alt="class1" >
+
+
+<hr class="new1">
+<h2 class="size02">Our Library</h2>
+
+<img src="static/image4/class15.jpg" alt="class1" >             <span class="tab"></span>
+<img src="static/image4/class16.jpg" alt="class1" >          <span class="tab"></span>
+<br>
+
+
+<hr class="new1">
+<h2 class="size02">Our School Canteen </h2>
+
+<img src="static/image4/class21.jpg" alt="class1" >          <span class="tab"></span>
+<img src="static/image4/class22.jpg" alt="class1" >          <span class="tab"></span>
+<img src="static/image4/pic31.jpg" alt="class1" >
+
+
+<hr class="new1">
+<h2 class="size02">Our School Buildings </h2>
+
+<img src="static/image4/class23.jpg" alt="class1" >          <span class="tab"></span>
+<img src="static/image4/class24.jpg" alt="class1" >
+<br>
+
+
+<hr class="new1">
+<h2 class="size02">Our School Kinder Garten Classroom </h2>
+
+
+<img src="static/image4/pic28.jpg" alt="class1" >           <span class="tab"></span>
+<img src="static/image4/pic29.jpg" alt="class1" >           <span class="tab"></span>
+<img src="static/image4/pic30.jpg" alt="class1" >
+
+
+<hr class="new1">
+<h2 class="size02">Our School Kinder Garten Playground </h2>
+<img src="static/image4/play4.jpg" alt="class1" >       <span class="tab"></span>
+<img src="static/image4/play1.jpg" alt="class1" >        <span class="tab"></span>
+<img src="static/image4/play2.jpg" alt="class2" >
+<img src="static/image4/play3.jpg" >
+
+
+<hr class="new1">
+<h2 class="size02">Our School Playground </h2>
+
+<img src="static/image4/play5.jpg" alt="class1" >          <span class="tab"></span>
+<img src="static/image4/sports3.jpg" alt="class1" >         <span class="tab"></span>
+<img src="static/image4/sports4.jpg" alt="class1" >
+
+<img src="static/image4/sports5.jpg" alt="class1" >         <span class="tab"></span>
+<img src="static/image4/sports7.jpg" alt="class1" >         <span class="tab"></span>
+
+<br>
+
+<hr class="new1">
+<h2 class="size02">Our School Training center </h2>
+
+<img src="static/image4/pic5.jpg" alt="class1" >            <span class="tab"></span>
+<img src="static/image4/pic6.jpg" alt="class1" >            <span class="tab"></span>
+<img src="static/image4/pic7.jpg" alt="class1" >
+
+
+<img src="static/image4/pic1.jpg" alt="class1" >            <span class="tab"></span>
+<img src="static/image4/sports1.jpg" alt="class1"  >        <span class="tab"></span>
+<img src="static/image4/pic12.jpg" alt="class1" >
+
+<img src="static/image4/pic14.jpg" alt="class1"  >
+
+<hr class="new1">
+<h2 class="size02">Our School Auditorium </h2>
+
+<img src="static/image4/pic26.jpg" alt="class1" >  <span class="tab"></span> <span class="tab"></span>
+<img src="static/image4/pic27.jpg" alt="class1" >
+
+<hr class="new1">
+
+
+
+</body>
+</html>

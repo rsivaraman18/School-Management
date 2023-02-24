@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm Password</title>
+     <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='myfont/fontawesome.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top" >
+
+<div class="container-fluid" id="schoolname">
+    <center>
+        <img src="{{ url_for('static',filename='image2/logo1.jpg')}}" height="50px" class="img img-rounded"
+        <h1><b>Lakshan International School</b></h1>
+    </center>
+</div>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand"> Lakshan School</a>
+        </div>
+       <ul class="nav navbar-nav">
+           <li ><a href="/Aboutus">About Us</a></li>
+           <li><a href="/Skilluplift">Skill Upliftment</a></li>
+           <li><a href="/gallery">Photo Gallery</a></li>
+
+       <!__ dropdown Menu ___>
+
+           <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Extra-Curicular
+                   <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+
+                   <li><a href="/indoorgame">Indoor Games</a></li>
+                   <li><a href="/outdoorgames">Outdoorgames</a></li>
+                   <li><a href="/culturalmeets"> Miscellanous</a></li>
+               </ul>
+           </li>
+
+           <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  School
+                   <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+
+                   <li><a href="/Preprimary">Pre-Primary(kinder garten)</a></li>
+                   <li><a href="/primary">Primary (grade I-VIII)</a></li>
+                   <li><a href="/highschool">High School </a></li>
+               </ul>
+           </li>
+
+       </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+             <li><a href="/">Home</a></li>
+            <li><a href="/Admin_loginpage">Admin Logout </a></li>
+            <li><a href="/Adminactivities">Admin Activities </a></li>
+        </ul>
+    </div>
+</nav> # nav ends here
+
+
+
+
+
+<div>
+    <h3>Hi Welcome to  {{username}} .</h3>
+
+</div>
+
+
+
+<div class="container" style="margin-top:110px;">
+   <div class="col-md-offset-3 col-md-5" >
+       <div class="shadow">
+           <form action="/admin_changepwd" method="POST" autocomplete="off">
+               <center><img src="{{url_for('static',filename='image2/logo1.jpg')}}" height="120px" class="img img-circle"></center>
+
+
+               <h3 class="page-header text-primary"> Admin change Ur password</h3>
+               <h3 class=" text-secondary text-center">Hi {{username.capitalize()}} ..We Heartly Welcomes You Back</h3>
+
+               {% with messages =get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category,message in messages %}
+                            <div class="alert alert-{{category}}">{{message}}</div>
+                        {% endfor %}
+                    {% endif %}
+               {% endwith %}
+
+               <br>
+               <div class="form-group">
+                   <label class="size10"> Username <span class="mandatory">*</span></label>
+                   <input id="s01" type="text" name="Uname" placeholder="name at welcome note above"  class="form-control" required>
+               </div>
+
+               <div class="form-group">
+                   <label class="size10"> Change Password <span class="mandatory">*</span></label>
+                   <input id="s01" type="text" name="pwd1" class="form-control" required>
+               </div>
+
+               <div class="form-group">
+                   <label class="size10">Confirm Password <span class="mandatory">*</span> </label>
+                   <input id="s01" type="password" name="pwd2" class="form-control" required>
+               </div>
+
+               <div class="form-group">
+                   <input type="submit" value="change password" class="btn btn-success btn-block btn-lg ">
+                   <input type="reset" value="clear" class="btn btn-danger btn-block btn-lg ">
+               </div>
+               </form>
+       </div>
+   </div>
+</div>
+
+
+
+</body>
+</html>
+
+
+<script>
+    $(document).ready(function() {
+    $('.alert').hide(7000)
+    });
+</script>

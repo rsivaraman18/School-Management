@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student  Login Page</title>
+
+    <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='myfont/fontawesome.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+
+<body class="body2">
+
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top" >
+
+<div class="container-fluid" id="schoolname">
+    <center>
+        <img src="{{ url_for('static',filename='image2/logo1.jpg')}}" height="50px" class="img img-rounded"
+        <h1><b>Lakshan International School</b></h1>
+    </center>
+</div>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand"> Lakshan School</a>
+        </div>
+       <ul class="nav navbar-nav">
+           <li ><a href="/Aboutus">About Us</a></li>
+           <li><a href="/Skilluplift">Skill Upliftment</a></li>
+           <li><a href="/gallery">Photo Gallery</a></li>
+
+       <!__ dropdown Menu ___>
+
+           <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Extra-Curicular
+                   <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+
+                   <li><a href="/indoorgame">Indoor Games</a></li>
+                   <li><a href="/outdoorgames">Outdoorgames</a></li>
+                   <li><a href="/culturalmeets"> Miscellanous</a></li>
+               </ul>
+           </li>
+
+           <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  School
+                   <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+
+                   <li><a href="/Preprimary">Pre-Primary(kinder garten)</a></li>
+                   <li><a href="/primary">Primary (grade I-VIII)</a></li>
+                   <li><a href="/highschool">High School </a></li>
+               </ul>
+           </li>
+
+       </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">Home</a></li>
+
+            <li><a href="/Admin_loginpage">Admin Login </a></li>
+        </ul>
+    </div>
+</nav> # nav ends here
+
+
+
+
+
+<div class='container15' style="margin-top:120px;">
+<center><h2 class="size01">Student Login Page</h2></center>
+<h3 class="size04">Warm  Welcome to our students </h3>
+<h4 class="size03">
+    Welcome to Lakshan International School,Academic to explore young talents. <br>
+    You are about to <u>log in </u> in to the world of lerarning at LAKS ,a world made possible due to a combination of 25years of legacy of best in class education and state of the art learning technology!.
+
+    Are you log in using the credentials given to you by the institution,please take time to explore our world.
+    the details mentioned there are your details as per the details received from you during admission.
+    We happy to see you here in the world of technology.
+    Ready we are going to explore the zone of success.
+</h4>
+
+</div>
+<h1></h1>
+<div class="container">
+   <div class="col-md-offset-2 col-md-5" >
+       <div class="shadow">
+           <form action="/St_login" method="POST" autocomplete="off">
+               <center><img src="{{url_for('static',filename='image2/logo1.jpg')}}" height="110px" class="img img-circle"></center>
+
+               <h1 class="page-header text-primary"> Student(Login)</h1>
+               {% with messages =get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category,message in messages %}
+                            <div class="alert alert-{{category}}">{{message}}</div>
+                        {% endfor %}
+                    {% endif %}
+               {% endwith %}
+
+               <div class="form-group" >
+                   <label class="size10"> Username <span class="mandatory">*</span></label>
+                   <input id="s01" type="text" name="name" class="form-control" required>
+               </div>
+
+                <div class="form-group">
+                    <label class="size10"> Password <span class="mandatory">*</span></label>
+                    <input id="s01" type="password" name="password" class="form-control" required>
+                </div>
+               <br>
+               <div class="form-group">
+                   <center><input type="submit" value="login" class="btn btn-success btn-lg ">
+                            <input type="reset" value="clear" class="btn btn-danger btn-lg ">
+                   </center>
+               </div>
+               <br>
+               <div class="form-group">
+                   <center>
+                       <u><a href="{{url_for('stud_forgotpwd')}}" class="size02">forgot password</a></u>
+                   </center>
+               </div>
+
+
+
+               </form>
+       </div>
+   </div>
+
+    <div class="col-md-5">
+       <img src="static/image2/study1.gif" alt="study1" >
+        <h2 class="size03" id="linespace">
+            Hi...Students.. <br>
+            &#9672; You need to enter the  credentials  to  login in .. <br>
+            &#9672; The credientials mentioned with star marks <span class="mandatory">*</span> are compulsory items for further action on this page.     <br>
+            &#9672; If you forgot ur password,click on forgot password link.
+        </h2>
+
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>
+
+<script>
+    $(document).ready(function() {
+    $('.alert').hide(7000)
+    });
+</script>

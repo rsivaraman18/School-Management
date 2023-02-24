@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About page</title>
+    <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>  <!__ jquery.min.js should place above bootsrap.min.js ___>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='myfont/fontawesome.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
+</head>
+<body class="body1">
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top" >
+
+<div class="container-fluid" id="schoolname">
+    <center>
+        <img src="{{ url_for('static',filename='image2/logo1.jpg')}}" height="50px" class="img img-rounded"
+        <h1><b>Lakshan International School</b></h1>
+    </center>
+</div>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand"> Lakshan School</a>
+        </div>
+       <ul class="nav navbar-nav">
+           <li class="active" ><a href="/Aboutus">About Us</a></li>
+           <li><a href="/Skilluplift">Skill Upliftment</a></li>
+           <li><a href="/gallery">Photo Gallery</a></li>
+
+       <!__ dropdown Menu ___>
+
+           <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Extra-Curicular
+                   <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+
+                   <li><a href="/indoorgame">Indoor Games</a></li>
+                   <li><a href="/outdoorgames">Outdoorgames</a></li>
+                   <li><a href="/culturalmeets"> Miscellanous</a></li>
+               </ul>
+           </li>
+
+           <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  School
+                   <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+
+                   <li><a href="/Preprimary">Pre-Primary(kinder garten)</a></li>
+                   <li><a href="/primary">Primary (grade I-VIII)</a></li>
+                   <li><a href="/highschool">High School </a></li>
+               </ul>
+           </li>
+
+       </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/Student_loginpage">Student Login</a></li>
+            <li><a href="/Admin_loginpage">Admin Login</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div style="margin-top:30px;">
+    <div class="col-md-6" style="margin-top:110px;">
+        <img src="static/image2/class15.jpg" >
+    </div>
+
+    <div class="col-md-6" style="margin-top:110px;">
+        <img src="static/image2/chat9.jpg" alt="findmme" style="height:360px;width:630px; ">
+    </div>
+</div>
+
+<div>
+    <br><br><br>f
+     <hr class="new1">
+</div>
+
+
+<div class="container09">
+
+    <h3  class="size02">Overview</h3>
+    <p  class="size03">This was a school website created by the young emerging Python Developer SIVARAMAN.He put his full hard work to learn each part of this website from various source available on the online.Because of this complete effort this website was developed today.
+    </p>
+    <p class="size03">
+        Atlast finally this school website was successfully developed and launched today.Please provide all your support for the growth of this website and also for this young developer Sivaraman.
+    </p>
+</div>
+
+
+
+
+</body>
+</html>

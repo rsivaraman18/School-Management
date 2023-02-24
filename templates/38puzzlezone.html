@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Puzzle Solving Zone</title>
+    <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
+</head>
+
+<body  class="body">
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top" >
+
+<div class="container-fluid" id="schoolname">
+    <center>
+        <img src="{{ url_for('static',filename='image2/logo1.jpg')}}" height="50px" class="img img-rounded"
+        <h1><b>Lakshan International School</b></h1>
+    </center>
+</div>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand"> Lakshan School</a>
+        </div>
+       <ul class="nav navbar-nav">
+           <li ><a href="/Aboutus">About Us</a></li>
+           <li><a href="/Skilluplift">Skill Upliftment</a></li>
+           <li><a href="/gallery">Photo Gallery</a></li>
+
+       <!__ dropdown Menu ___>
+
+           <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Extra-Curicular
+                   <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+
+                   <li><a href="/indoorgame">Indoor Games</a></li>
+                   <li><a href="/outdoorgames">Outdoorgames</a></li>
+                   <li><a href="/culturalmeets"> Miscellanous</a></li>
+               </ul>
+           </li>
+
+           <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  School
+                   <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+
+                   <li><a href="/Preprimary">Pre-Primary(kinder garten)</a></li>
+                   <li><a href="/primary">Primary (grade I-VIII)</a></li>
+                   <li><a href="/highschool">High School </a></li>
+               </ul>
+           </li>
+
+       </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">Home</a></li>
+            <li><a href="/Student_loginpage">Student Login</a></li>
+            <li><a href="/Admin_loginpage">Admin Login </a></li>
+        </ul>
+    </div>
+</nav> # nav ends here
+
+
+<div class="container15"  style="margin-top:120px;">
+    <center>
+        <h1 class="size04">Puzzle Solving Zone</h1>
+    </center>
+
+    <div class="col-md-6" id="sandal03">
+    <!__ Ques1 ___>
+        <h2 class="size04">Quiz 1</h2>
+
+        <p class="size03">
+            A monkey is trying to climb a coconut tree. He takes 3 steps forward and slips back 2 steps downward. Each forward step is 30 cm and each backward step is 40cm. How many steps are required to climb a 100cm tree?
+        </p>
+
+
+        <a class="btn btn-primary btn-lg" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Solution
+        </a>
+        <button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+           Solution with explanation
+        </button>
+
+
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                solution:<strong>50 steps</strong>
+                <br>
+                Each time the Monkey tries to go up: <br>
+                Climbs Upward = 3 X 30cm = 90 cm (takes 3 steps) <br>
+                Slips Downward = 2 X 40cm = 80cm (takes 2 steps) <br>
+                Total number of steps taken in each forward attempt = 3 steps + 2 steps = 5 steps <br>
+                Effectively moves 10 cm upwards (90cm - 80cm = 10cm) <br>
+                100cm/10cm = 10 <br>
+                Therefore, the monkey needs to cover 10 X 5 steps = <strong>50 steps</strong> to reach the top
+            </div>
+        </div>      <!__Closing collapse___>
+
+ <!__Ques 2___>
+        <hr class="new1">
+        <h2 class="size04">Quiz 2</h2>
+
+        <p class="size03">
+            A construction site requires at least 5 laborers to get a job done in 12 days. How many days will it take if 12 laborers are hired for the same job?
+        </p>
+
+        <a class="btn btn-primary btn-lg" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+            Solution
+        </a>
+        <button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+           Solution with explanation
+        </button>
+
+        <div class="collapse" id="collapseExample2">
+            <div class="card card-body">
+                solution:<strong>5 days</strong>
+                <br>
+
+                    Let X be the amount of work to be done <br>
+                    Let Y be the number of days taken by 12 laborers <br>
+                    Equation of work done by 5 laborers: <br>
+                    X/5 = 12 days <br>
+                    X = 60 <br>
+                    Equation of work done by 12 laborers: <br>
+                    X/12 = Y <br>
+                    60/12 = Y <br>
+                    Y= 5 <br>
+            </div>
+        </div>      <!__Closing collapse___>
+
+<!__Third collapse___>
+        <hr class="new1">
+
+        <h2 class="size04">Quiz 3</h2>
+        <p class="size03">
+             You have 50 biscuits. How many times can you subtract 5 from 50 biscuits?
+        </p>
+
+
+        <a class="btn btn-primary btn-lg" data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
+            Solution
+        </a>
+        <button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+           Solution with explanation
+        </button>
+
+
+        <div class="collapse" id="collapseExample3">
+            <div class="card card-body">
+                solution:<strong>Once </strong>
+                <br>
+
+                   Once only because after that it will not be 50 biscuits. <br>
+                    As you subtract 5 biscuits it will be 45 and not 50 anymore.
+            </div>
+        </div>      <!__Closing collapse___>
+
+
+<!__4th  ___>
+        <hr class="new1">
+        <h2 class="size04">Quiz 4</h2>
+        <p class="size03">
+              It is 9 am now, Rita studies for 2 hours, takes a bath for 1 hour and then has lunch for 1 hour. How many hours are left before 9 am tomorrow?
+        </p>
+
+
+        <a class="btn btn-primary btn-lg" data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4">
+            Solution
+        </a>
+        <button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">
+           Solution with explanation
+        </button>
+
+
+        <div class="collapse" id="collapseExample4">
+            <div class="card card-body">
+                solution:<strong>20 hours </strong>
+                <br>
+
+                   Rita takes 4 hours (2+1+1) to complete studying, bathing and eating her meal. <br>
+                    There are 24 hours between 9am today and 9am tomorrow. <br>
+                    24 hours - 4 hours = 20 hours
+            </div>
+        </div>      <!__ 4 ends___>
+
+
+<!__5th  e___>
+        <hr class="new1">
+        <h1 class="size04">Quiz 5</h1>
+        <p class="size03">
+         8 apples are there, you take 4 away and then you return 1 apple. How many apples do you have?
+        </p>
+
+        <p>
+        <a class="btn btn-primary btn-lg" data-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample5">
+            Solution
+        </a>
+        <button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample5">
+           Solution with explanation
+        </button>
+        </p>
+        <br>
+
+        <div class="collapse" id="collapseExample5">
+            <div class="card card-body">
+                solution:<strong>3 apples </strong>
+                <br>
+
+                    You got 4 apples for yourself and returned 1 apple
+                    Therefore 4 - 1 = 3 apples
+            </div>
+        </div>      <!__Closing collapse___>
+
+
+    </div>  <!__ closing colorsandal5 ___>
+
+<!__ sandal2 opening ___>
+     <div class="col-md-6" id="sandal04">
+<!__six  ___>
+      <h1 class="size04">Quiz 6</h1>
+      <p class="size03">
+         The sum of the ages of 5 children born at the intervals of 4 years each is 100 years. What is the age of the youngest child?
+        </p>
+
+
+        <a class="btn btn-primary btn-lg" data-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false" aria-controls="collapseExample6">
+            Solution
+        </a>
+        <button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-target="#collapseExample6" aria-expanded="false" aria-controls="collapseExample6">
+           Solution with explanation
+        </button>
+
+
+        <div class="collapse" id="collapseExample6">
+            <div class="card card-body">
+                solution:<strong>12 years</strong>
+                <br>
+                Let the age of the youngest child be x years. <br>
+                Therefore, the age of the other 4 children will be (x + 4), (x + 8), (x + 12) and (x + 16) <br>
+                Then  x + (x + 4) + (x + 8) + (x + 12) + (x + 16) = 100 <br>
+                5x + 40 = 100 <br>
+                5x = 100 - 40 = 60 <br>
+                x = 60 ÷ 5 <br>
+                x = 12 years
+
+
+            </div>
+
+        </div>      <!__Closing collapse___>
+         <br><br>
+ <!__seven collapse___>
+         <hr class="new1">
+        <h1 class="size04">Quiz 7</h1>
+         <p class="size03">
+              What should be the next two numbers in the series: 4, 40, 5, 45, 6, 50…...
+         </p>
+         <br>
+        <a class="btn btn-primary btn-lg" data-toggle="collapse" href="#collapseExample7" role="button" aria-expanded="false" aria-controls="collapseExample7">
+            Solution
+        </a>
+        <button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-target="#collapseExample7" aria-expanded="false" aria-controls="collapseExample7">
+           Solution with explanation
+        </button>
+
+
+        <div class="collapse" id="collapseExample7">
+            <div class="card card-body">
+                solution:<strong>7 & 55</strong>
+                <br>
+
+                    The above question has two sets of series and they follow two sets of rule
+                    The first number is 4 and is increased by 1 in alternate sequence as 5, 6... and the second number is 40 and is increased by 5 in alternate sequence as 45, 50 respectively.
+                    Therefore by following the above pattern, the next two numbers in the series should be:
+
+                    7 (6 + 1) and 55 (50 + 5)
+            </div>
+        </div>      <!__Closing collapse___>
+
+<!__ eigth collapse___>
+         <hr class="new1">
+         <h1 class="size04">Quiz 8</h1>
+         <p class="size03">
+             A tailor had a number of shirt pieces to cut from a roll of fabric. He cut each of equal length into 10 pieces. He cut at the rate of 45 cuts a minute. How many rolls would be cut in 25 minutes
+         </p>
+
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample8" role="button" aria-expanded="false" aria-controls="collapseExample8">
+            Solution
+        </a>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample8" aria-expanded="false" aria-controls="collapseExample8">
+           Solution with explanation
+        </button>
+
+        <div class="collapse" id="collapseExample8">
+            <div class="card card-body">
+                solution:<strong>125 </strong>
+                <br>
+
+                  The number of cuts required to roll a fabric into 10 pieces = 9. <br>
+                Therefore, required number of rolls = (45x25 ) ÷  9 = 125
+
+
+            </div>
+        </div>      <!__Closing collapse___>
+
+
+<!__9th  ___>
+         <hr class="new1">
+         <h1 class="size04">Quiz 9</h1>
+         <p class="size03">
+          The price of four tables and eight chairs is Rs. 16,050. What is the price of twenty tables and forty chairs?
+
+         </p>
+
+
+        <a class="btn btn-primary btn-lg" data-toggle="collapse" href="#collapseExample9" role="button" aria-expanded="false" aria-controls="collapseExample9">
+            Solution
+        </a>
+        <button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-target="#collapseExample9" aria-expanded="false" aria-controls="collapseExample9">
+           Solution with explanation
+        </button>
+        </p>
+
+        <div class="collapse" id="collapseExample9">
+            <div class="card card-body">
+                solution:<strong>Rs. 80,250</strong>
+                <br>
+
+                The number of 4 tables and 8 chairs has increased by 5 times. <br>
+                Therefore the original price of the 4 chairs and 8 tables has also increased by 5 times <br>
+                So, the price of twenty tables and forty chairs are = 16,050 ×  5 = Rs. 80,250 <br>
+
+
+            </div>
+        </div>      <!__Closing collapse___>
+
+
+<!__10th  collapse___>
+        <hr class="new1">
+         <h1 class="size04"> Quiz 10</h1>
+         <p class="size03">
+            8 apples are there, you take 4 away and then you return 1 apple. How many apples do you have?
+         </p>
+
+        <a class="btn btn-primary btn-lg" data-toggle="collapse" href="#collapseExample10" role="button" aria-expanded="false" aria-controls="collapseExample10">
+            Solution
+        </a>
+        <button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-target="#collapseExample10" aria-expanded="false" aria-controls="collapseExample10">
+           Solution with explanation
+        </button>
+        </p>
+
+        <div class="collapse" id="collapseExample10">
+            <div class="card card-body">
+                solution:<strong>3 apples </strong>
+                <br>
+
+                    You got 4 apples for yourself and returned 1 apple
+                    Therefore 4 - 1 = 3 apples
+            </div>
+        </div>      <!__Closing collapse___>
+
+
+
+
+
+
+ <!__ closing colorsandal6 ___>
+     </div>   <!__ closing colorsandal6 ___>
+</div>  <!__ closing container6 ___>
+
+</body>
+</html>

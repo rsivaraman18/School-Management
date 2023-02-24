@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body class="body3">
+
+<!__  ***********************************  NAv bar fixed at top  ************************************************       ___>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" >
+
+<div class="container-fluid" id="schoolname">
+    <center>
+        <img src="{{ url_for('static',filename='image2/logo1.jpg')}}" height="50px" class="img img-rounded"
+        <h1><b>Lakshan International School</b></h1>
+    </center>
+</div>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand"> Lakshan School</a>
+        </div>
+       <ul class="nav navbar-nav">
+           <li ><a href="/Aboutus">About Us</a></li>
+           <li class="active" ><a href="/Skilluplift">Skill Upliftment</a></li>
+           <li><a href="/gallery">Photo Gallery</a></li>
+
+       <!__ dropdown Menu ___>
+
+           <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Extra-Curicular
+                   <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+
+                   <li><a href="/indoorgame">Indoor Games</a></li>
+                   <li><a href="/outdoorgames">Outdoorgames</a></li>
+                   <li><a href="/culturalmeets"> Miscellanous</a></li>
+               </ul>
+           </li>
+
+           <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  School
+                   <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+
+                   <li><a href="/Preprimary">Pre-Primary(kinder garten)</a></li>
+                   <li><a href="/primary">Primary (grade I-VIII)</a></li>
+                   <li><a href="/highschool">High School </a></li>
+               </ul>
+           </li>
+
+       </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">Home</a></li>
+            <li><a href="/Student_loginpage">Student Login</a></li>
+            <li><a href="/Admin_loginpage">Admin Login </a></li>
+        </ul>
+    </div>
+</nav> # nav ends here
+
+<div style="margin-top:90px;">
+
+    <center><h1 class="size01">Skill Upliftment page</h1></center>
+
+    <h2 class="size03" id="linespace">
+        <span class="tab"></span>
+        Lakshan International school works for the progree of student .To promote their knowledge as well as to uplift the inner talent of each students.It helps the student to achieve thier goals.Every student talent are identified and build with continous training affect to reach their goal in their life.
+        We mould every student to the finest part to became a successful person in their life.
+    </h2>
+    <h1 class="size01"> Our Institution Provides: </h1>
+ <div >
+     <div class="col-md-offset-1 col-md-4">
+         <ul class="size03">
+            <li>Creative and Critical Thinking  </li>
+            <li>Collaboration</li>
+            <li>Financial Literacy </li>
+            <li>Resilience</li>
+            <li>Empathy</li>
+
+        </ul>
+    </div>
+
+    <div class="col-md-offset-1 col-md-6">
+         <ul class="size03">
+             <li> Self-Assessment And Reflection </li>
+             <li>Communication Skills  </li>
+             <li>Decision-Making Skills </li>
+             <li> Managing Stress </li>
+             <li>Time Management and Organisational Skills  </li>
+        </ul>
+    </div>
+
+</div>
+<br>
+    <h6 style="color:#FED049">close</h6> <!__  a text requires before hr tag ___>
+    <hr class="new1">
+    <br>
+<div>
+    <center>
+        <h2 class="size01">Welcome to Zone of Skill Upliftment</h2>
+        <p class="size03">
+            Our Institution provides various training to uplift the skills of future generation.
+            We ready to serve for you,are you ready.
+            You have tou <u> register</u> yourself to upgrade your  skills in this competetive world.
+            Don't waste your time in thinking too much. <br> Just make ur leisure time with pleasure enjoyment!...
+        </p>
+    </center>
+    <hr class="new1">
+</div>
+
+
+<!__ ******************************************* swimming class ********************************* ___>
+<div class="container6">
+
+    <div class="col-md-6" id="blue01">
+     <center><h1  class="size05"> Swimming Coaching class </h1></center>
+        <br>
+         <p  class="size07">
+             <span class="tab"></span>
+            Specialised trainer in swimming has been implanted to provide special training to the student of Lakshan International school.These coaches take the full care of student who accompained in this swimming coaching class.
+             <br><br>
+             <span class="tab"></span>Student are advised to follow the instruction of the coach at all time to have good flow of training session.
+             <br>
+             The abvious point of classroom testing is to asses what stusent have learned after the completion of a lesson or unit.
+              <br><br>
+            <h3 class="size06"> Instruction: </h3>
+            <h3 class="size07" id="linespace">
+                &#9658; Separate Coaches will be provided for both woman and men. <br>
+                &#9658; You are requested to bring the gate pass everytime to enter the class. <br>
+                &#9658; Only stipulated time you can practice. <br>
+                &#9658; Make sure that all belongings kept safe at locker .<br>
+              </h3>
+         </p>
+
+    </div>  <!__ color blue01 ends here ___>
+
+ <!__ color blue02 starts here ___>
+
+     <div class="col-md-6" id="blue02">
+         <center><h1  class="size05"> Swimming Coaching class </h1></center>
+         <h1  class="size06"> How to Join: </h1>
+
+            <h3 class="size07" id="linespace">
+                &#9672;Approach the school admin block.U can fill the form there.<br>
+                &#9672; After paying the fees you will be alloted a ID number. <br>
+                &#9672; You can also fill the online swimming application form by clicking the link below. <br>
+            </h3>
+                    <center>
+                        <br>
+                        <a href="/onlineform" class="btn btn-danger btn-lg"> Online Swimming application form </a>
+                    </center>
+         <br><br>
+         <p >
+             <br><br><br>
+             <center>
+                 <img src="static/image2/Pic12.jpg" >
+                 <img src="static/image2/Pic14.jpg" >
+             </center>
+         </p>
+
+     </div>  <!__ color blue02 ends here ___>
+</div>          <!__ container6 ends here ___>
+
+<!__ ******************************************** Swimming  ends here **************************************** ___>
+<!__ ******************************************** Dance  starts here  ***************************** ___>
+<!__ Dance start ___>
+
+<div class="container6">
+    <div class="col-md-6" id="sandal01">
+
+        <center><h1 class="size01"> Dance class </h1></center>
+        <br>
+         <p class="size03" >
+             <span class="tab"></span>
+             Trainers of various nation are involved in coaching our student.This provide a huge knowledge on various dance form.
+             <br><br>
+             We promote all type of dance threw well trained staff who actually won many awards in their field.Our coaches are also acts as master in media field.
+             <br><br>
+            <h3 class="size02">Instructions:</h3>
+            <h3 class="size03" id="linespace">
+                &#9658; Separate Coaches will be provided for both woman and men. <br>
+                &#9658; You are requested to bring the gate pass everytime to enter the class. <br>
+                &#9658; Only stipulated time you can practice. <br>
+                &#9658; Make sure that all belongings kept safe at locker .<br>
+
+            </h3>
+         </p>
+
+
+    </div>     <!__ color sandal01 ends here ___>
+
+<!__ color sandal02 starts here ___>
+     <div class="col-md-6" id="sandal02">
+
+         <center><h1 class="size01"> Dance class </h1></center>
+         <h3 class="size02">How to join </h3>
+            <h3 class="size03"  id="linespace">
+                &#9672;Approach the school admin block.U can fill the form there.<br>
+                &#9672; After paying the fees you will be alloted a ID number. <br>
+                &#9672; You can also fill the online swimming application form by clicking the link below. <br>
+            </h3>
+
+          <center>
+                        <br>
+                        <a href="/onlineform" class="btn btn-danger btn-lg"> Online Dance class application form </a>
+                    </center>
+         <p>
+             <br><br><br>
+            <center>
+                <img src="static/image2/Pic15.jpg" alt="science1" >
+                <img src="static/image2/Pic16.jpg" alt="science" ><br><br>
+            </center>
+         </p>
+
+     </div>     <!__ color sandal02 ends here ___>
+
+</div>   <!__ container 6 ends here ___>
+
+<!__ ********************************************  Dance class ends here **************************************** ___>
+<!__ ******************************************* singing class ********************************* ___>
+
+<div class="container6">
+
+    <div class="col-md-6" id="blue01">
+     <center><h1  class="size05"> Singing Coaching class </h1></center>
+        <br>
+         <p  class="size07">
+             <span class="tab"></span>
+            Specialised trainer in singing has been implanted to provide special training to the student of Lakshan International school.These coaches take the full care of student who accompained in this singing coaching class.
+             <br><br>
+             <span class="tab"></span>Student are advised to follow the instruction of the coach at all time to have good flow of training session.
+             <br>
+             The abvious point of classroom testing is to asses what stusent have learned after the completion of a lesson or unit.
+              <br><br>
+            <h3 class="size06"> Instruction: </h3>
+            <h3 class="size07" id="linespace">
+                &#9658; Separate Coaches will be provided for both woman and men. <br>
+                &#9658; You are requested to bring the gate pass everytime to enter the class. <br>
+                &#9658; Only stipulated time you can practice. <br>
+                &#9658; Make sure that all belongings kept safe at locker .<br>
+              </h3>
+         </p>
+
+    </div>  <!__ color blue01 ends here ___>
+
+ <!__ color blue02 starts here ___>
+
+     <div class="col-md-6" id="blue02">
+         <center><h1  class="size05"> Singing Coaching class </h1></center>
+         <h1  class="size06"> How to Join: </h1>
+
+            <h3 class="size07" id="linespace">
+                &#9672;Approach the school admin block.U can fill the form there.<br>
+                &#9672; After paying the fees you will be alloted a ID number. <br>
+                &#9672; You can also fill the online swimming application form by clicking the link below. <br>
+            </h3>
+                    <center>
+                        <br>
+                        <a href="/onlineform" class="btn btn-danger btn-lg"> Online singing application form </a>
+                    </center>
+         <br><br>
+         <p >
+             <br><br><br>
+             <center>
+                 <img src="static/image2/pic18.jpg"  >
+
+             </center>
+         </p>
+
+     </div>  <!__ color blue02 ends here ___>
+</div>          <!__ container6 ends here ___>
+
+
+<!__ ******************************************** Singing  ends here **************************************** ___>
+<!__ ******************************************** Computer skills  starts here  ***************************** ___>
+
+<div class="container6">
+    <div class="col-md-6" id="sandal01">
+
+        <center><h1 class="size01"> Computer skills </h1></center>
+        <br>
+         <p class="size03" >
+             <span class="tab"></span>
+             Trainers of various nation are involved in coaching our student.This provide a huge knowledge on various computer fillled.Now a days machine learning ruling entire world.
+             <br><br>
+             These training are provide top professional from many MNC and IIT institute.they share their work experience with everyone to achieve their goals.
+             <br><br>
+            <h3 class="size02">Instructions:</h3>
+            <h3 class="size03" id="linespace">
+                &#9658; Separate Coaches will be provided for both woman and men. <br>
+                &#9658; You are requested to bring the gate pass everytime to enter the class. <br>
+                &#9658; Only stipulated time you can practice. <br>
+                &#9658; Make sure that all belongings kept safe at locker .<br>
+
+            </h3>
+         </p>
+
+
+    </div>     <!__ color sandal01 ends here ___>
+
+<!__ color sandal02 starts here ___>
+     <div class="col-md-6" id="sandal02">
+
+         <center><h1 class="size01"> Computer class</h1></center>
+         <h3 class="size02">How to join </h3>
+            <h3 class="size03"  id="linespace">
+                &#9672;Approach the school admin block.U can fill the form there.<br>
+                &#9672; After paying the fees you will be alloted a ID number. <br>
+                &#9672; You can also fill the online swimming application form by clicking the link below. <br>
+            </h3>
+
+          <center>
+                        <br>
+                        <a href="/onlineform" class="btn btn-danger btn-lg"> Online Computer class application form </a>
+                    </center>
+         <p>
+             <br><br><br>
+            <center>
+                <img src="static/image2/pic21.jpg" alt="science1" >
+            </center>
+         </p>
+
+     </div>     <!__ color sandal02 ends here ___>
+
+</div>   <!__ container 6 ends here ___>
+
+<!__ ********************************************  computer  class ends here **************************************** ___>
+<!__ ******************************************* Typritting class ********************************* ___>
+
+<div class="container6">
+
+    <div class="col-md-6" id="blue01">
+     <center><h1  class="size05"> Typewritting class </h1></center>
+        <br>
+         <p  class="size07">
+             <span class="tab"></span>
+            Specialised trainer typewritting has been implanted to provide special training to the student of Lakshan International school.These coaches take the full care of student who accompained in this typewritting coaching class.
+             <br><br>
+             <span class="tab"></span>Student are advised to follow the instruction of the coach at all time to have good flow of training session.
+             <br>
+             The abvious point of classroom testing is to asses what student have learned after the completion of a lesson or unit.
+              <br><br>
+            <h3 class="size06"> Instruction: </h3>
+            <h3 class="size07" id="linespace">
+                &#9658; Separate Coaches will be provided for both woman and men. <br>
+                &#9658; You are requested to bring the gate pass everytime to enter the class. <br>
+                &#9658; Only stipulated time you can practice. <br>
+                &#9658; Make sure that all belongings kept safe at locker .<br>
+              </h3>
+         </p>
+
+    </div>  <!__ color blue01 ends here ___>
+
+ <!__ color blue02 starts here ___>
+
+     <div class="col-md-6" id="blue02">
+         <center><h1  class="size05"> Typewriting class </h1></center>
+         <h1  class="size06"> How to Join: </h1>
+
+            <h3 class="size07" id="linespace">
+                &#9672;Approach the school admin block.U can fill the form there.<br>
+                &#9672; After paying the fees you will be alloted a ID number. <br>
+                &#9672; You can also fill the online swimming application form by clicking the link below. <br>
+            </h3>
+                    <center>
+                        <br>
+                        <a href="/onlineform" class="btn btn-danger btn-lg"> Online Typewriting application form </a>
+                    </center>
+         <br><br>
+         <p >
+             <br><br><br>
+             <center>
+                 <img src="static/image2/pic22.jpg"  >
+             </center>
+         </p>
+
+     </div>  <!__ color blue02 ends here ___>
+</div>          <!__ container6 ends here ___>
+
+
+<!__ ******************************************** typewritting  ends here **************************************** ___>
+<!__ ******************************************** yoga starts here  ***************************** ___>
+
+<div class="container6">
+    <div class="col-md-6" id="sandal01">
+
+        <center><h1 class="size01"> Yoga class</h1></center>
+        <br>
+         <p class="size03" >
+             <span class="tab"></span>
+             Trainers of various nation are involved in coaching our student.This provide a huge knowledge on various camp center in and around tamilnadu field.Now a days stress  ruling entire world,to reduce put youur body to self relaxation,by doing yoga.
+             <br><br>
+             These training achieved there knowledge from siddha and india's ethnic medicine.they share their work experience with everyone to achieve their goals.
+             <br><br>
+            <h3 class="size02">Instructions:</h3>
+            <h3 class="size03" id="linespace">
+                &#9658; Separate Coaches will be provided for both woman and men. <br>
+                &#9658; You are requested to bring the gate pass everytime to enter the class. <br>
+                &#9658; Only stipulated time you can practice. <br>
+                &#9658; Make sure that all belongings kept safe at locker .<br>
+
+            </h3>
+         </p>
+
+
+    </div>     <!__ color sandal01 ends here ___>
+
+<!__ color sandal02 starts here ___>
+     <div class="col-md-6" id="sandal02">
+
+         <center><h1 class="size01"> Yoga class</h1></center>
+         <h3 class="size02">How to join </h3>
+            <h3 class="size03"  id="linespace">
+                &#9672;Approach the school admin block.U can fill the form there.<br>
+                &#9672; After paying the fees you will be alloted a ID number. <br>
+                &#9672; You can also fill the online swimming application form by clicking the link below. <br>
+            </h3>
+
+          <center>
+                        <br>
+                        <a href="/onlineform" class="btn btn-danger btn-lg"> Online Yoga class application form </a>
+                    </center>
+         <p>
+             <br><br><br>
+            <center>
+                <img src="static/image2/pic24.jpg" alt="science1" >
+            </center>
+         </p>
+
+     </div>     <!__ color sandal02 ends here ___>
+
+</div>   <!__ container 6 ends here ___>
+
+<!__ ********************************************  computer  class ends here **************************************** ___>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

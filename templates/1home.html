@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>  <!__ jquery.min.js should place above bootsrap.min.js ___>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='myfont/fontawesome.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
+</head>
+
+<body class="body1">
+
+<nav class="navbar navbar-inverse navbar-fixed-top" >
+
+<div class="container-fluid" id="schoolname">
+    <center>
+        <img src="{{ url_for('static',filename='image2/logo1.jpg')}}" height="50px" class="img img-rounded"
+        <h1><b>Lakshan International School</b></h1>
+    </center>
+</div>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand"> Lakshan School</a>
+        </div>
+       <ul class="nav navbar-nav">
+           <li ><a href="/Aboutus">About Us</a></li>
+           <li><a href="/Skilluplift">Skill Upliftment</a></li>
+           <li><a href="/gallery">Photo Gallery</a></li>
+
+       <!__ dropdown Menu ___>
+
+           <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Extra-Curicular
+                   <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+
+                   <li><a href="/indoorgame">Indoor Games</a></li>
+                   <li><a href="/outdoorgames">Outdoorgames</a></li>
+                   <li><a href="/culturalmeets"> Miscellanous</a></li>
+               </ul>
+           </li>
+
+           <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  School
+                   <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+
+                   <li><a href="/Preprimary">Pre-Primary(kinder garten)</a></li>
+                   <li><a href="/primary">Primary (grade I-VIII)</a></li>
+                   <li><a href="/highschool">High School </a></li>
+               </ul>
+           </li>
+
+       </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/Student_loginpage">Student Login</a></li>
+            <li><a href="/Admin_loginpage">Admin Login</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!__ CArousel IMage starts here ___>
+
+<div class="container6" style="margin-top:120px;">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+            <li data-target="#myCarousel" data-slide-to="6"></li>
+            <li data-target="#myCarousel" data-slide-to="7"></li>
+            <li data-target="#myCarousel" data-slide-to="8"></li>
+        </ol>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+
+            <div class="item active">
+               <img src="static/image1/final1.jpg" alt="final1" >
+                <div class="carousel-caption">
+                    <h3></h3>
+                    <p>!</p>
+                </div>
+            </div>
+
+            <div class="item ">
+                <img src="static/image1/final2.jpg" alt="final2" >
+                <div class="carousel-caption">
+                    <h3 style="color:red">We love Kids,kids love me</h3>
+                    <p>Love Makes everything </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="static/image1/final3.jpg" alt="final3" >
+                <div class="carousel-caption">
+                    <h3>I Achieve</h3>
+                    <p>We Train every day,U achieve One day</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="static/image1/final4.jpg" alt="final4" >
+                <div class="carousel-caption">
+                    <h3>Bright Future Ahead</h3>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="static/image1/final5.jpg" alt="final5" >
+                <div class="carousel-caption">
+                    <h3> </h3>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="static/image1/final6.jpg" alt="final6" >
+                <div class="carousel-caption">
+                    <h3> Competetive  World</h3>
+                    <p>We Train every day,U achieve One day</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="static/image1/final7.jpg" alt="final7" >
+                <div class="carousel-caption">
+                    <h3>I Achieve</h3>
+                    <p>We Train every day,U achieve One day</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="static/image1/final8.jpg" alt="final8" >
+                <div class="carousel-caption">
+                    <h3>Success near to you</h3>
+                    <p></p>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <img src="static/image1/final9.jpg" alt="final9" >
+                <div class="carousel-caption">
+                    <h3>Tamil Club</h3>
+                    <p></p>
+                </div>
+            </div>
+
+
+        </div>
+
+    <!-- Left and right controls -->
+
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left">&#8592</span>
+            <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right">  <bold> &#8594 </bold> </span>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div>
+</div>
+
+
+<div class="container6">
+    <div class="col-md-6" id="blue01">
+        <center>
+            <br>
+            <h1  class="size05">Vision</h1>
+        </center>
+        <br>
+         <p  class="size07">
+             We endeavour to be the right mentor for IIT-JEE aspirants, while also helping them develop a global perspective, with a keen interest in community life.
+             <br> <br>
+             We prepare students for competitive exams by providing in-depth knowledge of various subjects at an intermediate level.
+             <br> <br>
+             The school is dedicated to prepare yopung men to make a positive differencw in the world.By fostering the intellectual ,spiritual,physical and emotional development,the school seeks to inspire and motivate them to: strive for excellence,seek truth,act responsibly,and help others.
+         </p>
+    </div>
+
+     <div class="col-md-6" id="blue02">
+         <br>
+         <center> <h2  class="size05">Mission</h2></center>
+         <br>
+         <p class="size07">
+             Our goal is to focus on the holistic development of each child, and to give them a competitive edge with the help of an extensive curriculum and dynamic teaching.
+             <br>
+             <br>
+         <center  class="size07">Morals : The ability to discriminate between right and wrong</center>
+                <br>
+                <br>
+         <center  class="size07">Values : The unique beliefs and feelings of an individual</center>
+            <br>
+            <br>
+         <center  class="size07">Ethics : The principles that define everyday behaviour</center>
+              <br>
+             <br>
+         <center  class="size07">Problem-solving Techniques : The skill to resolve difficult issues</center>
+              <br>
+            <br>
+         <center  class="size07"> Positive Attitude : The highest indicator of a healthy personality</center>
+         </p>
+     </div>
+
+</div>
+
+
+<div class="container01" id="blue02">
+    <div class="col-md-offset-1 col-md-10" >
+        <h2 class="page-header text-info" >MANAGEMENT</h2>
+        <p class="size03">
+            Our management’s futuristic vision, determination and leadership has enabled them to set new benchmarks, ultimately resulting in a world-class education system. Taking our founders’ vision further, our team of young, dynamic, determined leaders continue to groom our community of global learners, through methodologies that are an extraordinary blend of conventional and contemporary
+
+        </p>
+    </div>
+
+
+
+
+    <div class="col-md-offset-1 col-md-10" >
+        <h2 class="page-header text-info" >JOURNEY</h2>
+        <p class="size03">
+            Lakshan International School first surfaced on the academic horizon in the year 2003 and within a span of 20 years went on to become Asia's largest educational group. The past two and a half decades witnessed Sri Chaitanya introducing novel academic programmes that have helped students enter the nation's premier engineering and medical colleges. The manner in which the Group has transformed the outlook towards education has been nothing short of exemplary.
+
+        </p>
+    </div>
+</div>
+
+<br>
+<br>
+
+<div class="col-md-12" id="blue01" >
+    <div>
+        <h2 class="page-header text-primary" >DIVERSITY</h2>
+        <p class="size07">
+            At Lakshan International School, we understand the importance of equal opportunity and it reflects in the constant rise in the percentage of female employees.Lakshan International School first surfaced on the academic horizon in the year 2003 and within a span of 20 years went on to become Asia's largest educational group. The past two and a half decades witnessed Sri Chaitanya introducing novel academic programmes that have helped students enter the nation's premier engineering and medical colleges. The manner in which the Group has transformed the outlook towards education has been nothing short of exemplary.
+
+        </p>
+       <center>
+           <img src="static/image2/chai.png" alt="nature1" >
+          <h2> Employee ratio: Female - 57% | Male - 43%</h2>
+       </center>
+    </div>
+</div>
+
+
+
+<div class="col-md-offset-3 col-md-6"  >
+    <div>
+
+        <h2 class="text-secondary text-center" >Location </h2>
+        <hr class="new1">
+         <center><img src="static/image2/logo1.jpg" alt="nature1" style="width:200px;" >
+        <br>
+             <h2 class="size02">  Lakshan International School</h2> <br>
+             <p class="size03">
+                Plot No: 68,West Madha Church Street <br>
+                Royapuram ,Chennai, <br>
+                Chennai, <br>
+                Tamilnadu - 600013 <br><br>
+
+                For Admissions: 9660543141 <br>
+                Web/App Support:siva@gmail.com
+            </center>
+        </p>
+
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>

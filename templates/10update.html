@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+
+    <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='myfont/fontawesome.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top" >
+
+<div class="container-fluid" id="schoolname">
+    <center>
+        <img src="{{ url_for('static',filename='image2/logo1.jpg')}}" height="50px" class="img img-rounded"
+        <h1><b>Lakshan International School</b></h1>
+    </center>
+</div>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand"> Lakshan School</a>
+        </div>
+       <ul class="nav navbar-nav">
+           <li ><a href="/Aboutus">About Us</a></li>
+           <li><a href="/Skilluplift">Skill Upliftment</a></li>
+           <li><a href="/gallery">Photo Gallery</a></li>
+
+       <!__ dropdown Menu ___>
+
+           <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Extra-Curicular
+                   <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+
+                   <li><a href="/indoorgame">Indoor Games</a></li>
+                   <li><a href="/outdoorgames">Outdoorgames</a></li>
+                   <li><a href="/culturalmeets"> Miscellanous</a></li>
+               </ul>
+           </li>
+
+           <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  School
+                   <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+
+                   <li><a href="/Preprimary">Pre-Primary(kinder garten)</a></li>
+                   <li><a href="/primary">Primary (grade I-VIII)</a></li>
+                   <li><a href="/highschool">High School </a></li>
+               </ul>
+           </li>
+
+       </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">Home</a></li>
+            <li><a href="/Admin_loginpage">Admin Logout</a></li>
+             <li><a href="/Adminactivities">Admin Activities </a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<div class="col-md-offset-2 col-md-4" style="margin-top:130px;">
+    <div class="shadow">
+        <form method="POST">
+            <i><h1 class="page-header text-primary text-center">UPDATE CANDIDATE RECORD</h1></i>
+            <i><h3 class="text-secondary text-center">PERSONAL INFORMATION</h3></i>
+
+             {% with messages =get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category,message in messages %}
+                        <div class="alert alert-{{category}}">
+                            {{message}}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+                <div class="form-group">
+                    <label  class="size10"> Rollno <span class="mandatory">*</span></label>
+                    <input id="s01" type="number" name="rollno"  value="{{MYDATA['rollno']}}" class="form-control" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label  class="size10"> Name <span class="mandatory">*</span> </label>
+                    <input id="s01" type="text" name="name"  value="{{MYDATA['name']}}" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label> DOB <span class="mandatory">*</span> </label>
+                    <input id="s01" type="date" name="dob" value="{{MYDATA['dob']}}" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label  class="size10">Father's Name </label>
+                    <input id="s01" type="text" name="fname"  value="{{MYDATA['fathername']}}" class="form-control" >
+                </div>
+
+                <div class="form-group">
+                    <label  class="size10">Mother's Name</label>
+                    <input id="s01" type="text" name="mname" value="{{MYDATA['mothername']}}"  class="form-control" >
+                </div>
+
+                <div class="form-group">
+                    <label  class="size10">Address</label>
+                    <input id="s01" type="text" name="address" value="{{MYDATA['address']}}"  class="form-control" >
+                </div>
+
+                <div class="form-group">
+                    <label  class="size10">Mail</label>
+                    <input id="s01" type="text" name="mail" value="{{MYDATA['mail']}}" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label  class="size10">Contact</label>
+                    <input id="s01" type="text" name="contact"  value="{{MYDATA['contact']}}" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label  class="size10">Password</label>
+                    <input id="s01" type="text" name="password"   value="{{MYDATA['password']}}" class="form-control" required>
+                </div>
+
+                <br>
+                <i><h3 class=" page-headertext-secondary text-center">EXAM DETAILS</h3></i>
+
+                 <div class="form-group">
+                    <label  class="size10"> Tamil <span class="mandatory">*</span> </label>
+                    <input id="s01" type="number" name="tamil" value="{{MYDATA['tamil']}}" class="form-control" min="0" max="100" required>
+                </div>
+
+                <div class="form-group">
+                    <label  class="size10">English <span class="mandatory">*</span> </label>
+                    <input id="s01" type="number" name="english"  value="{{MYDATA['english']}}" class="form-control" min="0" max="100"  required>
+                </div>
+
+                <div class="form-group">
+                    <label  class="size10">Maths <span class="mandatory">*</span> </label>
+                    <input id="s01" type="number" name="maths"  value="{{MYDATA['maths']}}" class="form-control"  min="0" max="100"  required>
+                </div>
+
+                <div class="form-group">
+                    <label  class="size10">Science <span class="mandatory">*</span> </label>
+                    <input id="s01" type="number" name="science" value="{{MYDATA['science']}}" class="form-control" min="0" max="100"  required>
+                </div>
+
+                <div class="form-group">
+                    <label  class="size10">Social <span class="mandatory">*</span> </label>
+                    <input id="s01" type="text" name="social" value="{{MYDATA['social']}}"  class="form-control" min="0" max="100"   required>
+                </div>
+
+
+                <div class="form-group">
+                    <input type="submit" value="update me" class="btn btn-success btn-block btn-lg">
+                    <input type="reset" value="clear" class="btn btn-danger btn-block btn-lg">
+                </div>
+
+
+        </form>
+    </div>
+1</div>
+
+
+<!__  sfgf___>
+
+    <div class="col-md-6" style="margin-top:150px;">
+         <div class="shadow">
+           <ul class="size07">
+               <center>Remember Note</center>
+               <hr class="new1">
+               <li>Exam results of students are need to be added here,with great concentration.</li>
+               <li> This is autogeneration page, enter only the subject marks,neccessary calculation are calculated automatically.</li>
+               <li>Use the <u>computer generated Rollno</u> to enter the student data.</li>
+               <li>Dont share the mark details to anyone, because it is confidential.</li>
+               <li>People below <u>35</u> are considered as Fail in examination. </li>
+               <hr class="new1">
+               <li>This is bigger form that contains <u> personal info</u> as well as <u>exam marks</u>.</li>
+               <li>scroll down for submit button.</li>
+               <li>If information are true ,dont alter any data</li>
+           </ul>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>
+
+
+<script>
+    $(document).ready(function() {
+    $('.alert').hide(50000)
+    });
+</script>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>coaching class</title>
+
+   <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='myfont/fontawesome.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+
+<body class="body2">
+
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top" >
+
+<div class="container-fluid" id="schoolname">
+    <center>
+        <img src="{{ url_for('static',filename='image2/logo1.jpg')}}" height="50px" class="img img-rounded"
+        <h1><b>Lakshan International School</b></h1>
+    </center>
+</div>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand"> Lakshan School</a>
+        </div>
+       <ul class="nav navbar-nav">
+           <li ><a href="/Aboutus">About Us</a></li>
+           <li><a href="/Skilluplift">Skill Upliftment</a></li>
+           <li><a href="/gallery">Photo Gallery</a></li>
+
+       <!__ dropdown Menu ___>
+
+           <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Extra-Curicular
+                   <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+
+                   <li><a href="/indoorgame">Indoor Games</a></li>
+                   <li><a href="/outdoorgames">Outdoorgames</a></li>
+                   <li><a href="/culturalmeets"> Miscellanous</a></li>
+               </ul>
+           </li>
+
+           <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  School
+                   <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+
+                   <li><a href="/Preprimary">Pre-Primary(kinder garten)</a></li>
+                   <li><a href="/primary">Primary (grade I-VIII)</a></li>
+                   <li><a href="/highschool">High School </a></li>
+               </ul>
+           </li>
+
+       </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+           <li><a href="{{url_for('index')}}">Home</a></li>
+            <li><a href="/Studentactivities">Student Activities</a></li>
+            <li><a href="/Student_loginpage">Logout</a></li>
+        </ul>
+    </div>
+</nav> # nav ends here
+
+
+<!__ split screen into 2 ___>
+
+<i><h1 class="text-info text-center">Coaching Class List</h1></i>
+<hr class="new1">
+
+
+
+
+    <!__ Tamil __>
+
+    <div class="col-md-offset-1 col-md-4">
+        <table class="table table-bordered" id="tablefont">
+            <thead>
+                <tr>
+                    <th colspan="2" style="text-align:center">TAMIL COACHING CLASS LIST</th>
+                </tr>
+                <tr>
+                    <th>S.NO</th>
+                    <th>NAME</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                    {% for T in Tamil %}
+                    {% set i=loop.index %}
+                <tr>
+                    <td>{{i}}</td>
+                    <td>{{T}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+<!__ English __>
+
+    <div class="col-md-offset-1 col-md-4">
+        <table class="table table-bordered" id="tablefont">
+            <thead>
+                <tr>
+                    <th colspan="2"  style="text-align:center">ENGLISH COACHING CLASS LIST</th>
+                </tr>
+                <tr>
+                    <th>S.NO</th>
+                    <th>NAME</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                    {% for E in English %}
+                    {% set i=loop.index %}
+                <tr>
+                    <td>{{i}}</td>
+                    <td>{{E}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+<!__ MATHS __>
+
+    <div class="col-md-offset-1 col-md-4">
+        <table class="table table-bordered" id="tablefont">
+            <thead>
+                <tr>
+                    <th colspan="2"  style="text-align:center">MATHS COACHING CLASS LIST</th>
+                </tr>
+                <tr>
+                    <th>S.NO</th>
+                    <th>NAME</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                    {% for M in Maths %}
+                    {% set i=loop.index %}
+                <tr>
+                    <td>{{i}}</td>
+                    <td>{{M}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+<!__ SCience __>
+
+    <div class="col-md-offset-1 col-md-4">
+        <table class="table table-bordered" id="tablefont">
+            <thead>
+                <tr>
+                    <th colspan="2"  style="text-align:center">SCIENCE COACHING CLASS LIST</th>
+                </tr>
+                <tr>
+                    <th>S.NO</th>
+                    <th>NAME</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                    {% for S in Science %}
+                    {% set i=loop.index %}
+                <tr>
+                    <td>{{i}}</td>
+                    <td>{{S}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+<!__ Social __>
+
+    <div class="col-md-offset-3 col-md-4">
+        <table class="table table-bordered" id="tablefont">
+            <thead>
+                <tr>
+                    <th colspan="2"  style="text-align:center">SOCIAL COACHING CLASS LIST</th>
+                </tr>
+                <tr>
+                    <th>S.NO</th>
+                    <th>NAME</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                    {% for SO in Social %}
+                    {% set i=loop.index %}
+                <tr>
+                    <td>{{i}}</td>
+                    <td>{{SO}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>

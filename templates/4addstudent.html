@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add student</title>
+     <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='myfont/fontawesome.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+
+<body class="body2">
+
+<nav class="navbar navbar-inverse navbar-fixed-top" >
+
+<div class="container-fluid" id="schoolname">
+    <center>
+        <img src="{{ url_for('static',filename='image2/logo1.jpg')}}" height="50px" class="img img-rounded"
+        <h1><b>Lakshan International School</b></h1>
+    </center>
+</div>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand"> Lakshan School</a>
+        </div>
+       <ul class="nav navbar-nav">
+           <li ><a href="/Aboutus">About Us</a></li>
+           <li><a href="/Skilluplift">Skill Upliftment</a></li>
+           <li><a href="/gallery">Photo Gallery</a></li>
+
+       <!__ dropdown Menu ___>
+
+           <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Extra-Curicular
+                   <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+
+                   <li><a href="/indoorgame">Indoor Games</a></li>
+                   <li><a href="/outdoorgames">Outdoorgames</a></li>
+                   <li><a href="/culturalmeets"> Miscellanous</a></li>
+               </ul>
+           </li>
+
+           <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  School
+                   <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+
+                   <li><a href="/Preprimary">Pre-Primary(kinder garten)</a></li>
+                   <li><a href="/primary">Primary (grade I-VIII)</a></li>
+                   <li><a href="/highschool">High School </a></li>
+               </ul>
+           </li>
+
+       </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">Home</a></li>
+            <li><a href="/Admin_loginpage">Admin Logout </a></li>
+            <li><a href="/Adminactivities">Admin Activities </a></li>
+
+        </ul>
+    </div>
+</nav>
+
+
+<div class="container" style="margin-top:150px">
+     <div class="col-md-offset-1 col-md-5" >
+         <div class="shadow">
+             <form action="/New_Registration" method="POST" autocomplete="off">
+                 <center><h1 class="page-header text-sucess"> New Registration</h1></center>
+                 {% with messages =get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category,message in messages %}
+                        <div class="alert alert-{{category}}">
+                             <h3 class="size11">
+                                 New Candidate <span class="highlight">{{Sname}}</span> is {{message}}. Computer generated Regester Number is <span class="highlight">{{myrollno}}</span>
+                             </h3>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                 <div class="form-group">
+                    <label class="size10"> Name <span class="mandatory">*</span> </label>
+                    <input type="text" name="name" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="size10"> DOB <span class="mandatory">*</span> </label>
+                    <input id="s01"  type="date" name="dob" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="size10">Father's Name </label>
+                    <input id="s01"  type="text" name="fname" class="form-control" >
+                </div>
+
+                <div class="form-group">
+                    <label class="size10">Mother's Name</label>
+                    <input id="s01"  type="text" name="mname" class="form-control" >
+                </div>
+
+                <div class="form-group">
+                    <label class="size10">Address</label>
+                    <input id="s01" type="text" name="address" class="form-control" >
+                </div>
+
+                <div class="form-group">
+                    <label class="size10">Mail <span class="mandatory">*</span> </label>
+                    <input id="s01" type="text" name="mail" class="form-control" required>
+                </div>
+
+                 <div class="form-group">
+                    <label class="size10">Contact <span class="mandatory">*</span> </label>
+                    <input id="s01" type="text" name="contact" class="form-control" required>
+                 </div>
+
+                <div class="form-group">
+                    <input type="submit" value="submit" class="btn btn-success btn-block btn-lg">
+                    <input type="reset" value="clear" class="btn btn-danger btn-block btn-lg">
+
+                </div>
+
+
+            </form>
+       </div>
+     </div>
+
+
+
+    <div class="col-md-5">
+       <center><img src="static/image2/study1.gif" alt="study1" ></center>
+        <h2 class="size03" id="linespace">
+            Hi...Admins.. <br>
+            <ul id="head04">
+                <br>
+                <li>This Page can be used to load the new student details.</li>
+                <li>Proper concentration should be dedicted while entering the data's of candidate. </li>
+                <li>After submiting the data ,a new register number produced,use that further action. </li>
+                <br>
+            </ul>
+
+        </h2>
+
+    </div>
+</div>
+
+</body>
+</html>
+<script>
+    $(document).ready(function() {
+    $('.alert').hide(50000)
+    });
+</script>

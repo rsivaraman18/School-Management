@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam Details</title>
+    <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='myfont/fontawesome.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body class="body2">
+
+<nav class="navbar navbar-inverse navbar-fixed-top" >
+
+<div class="container-fluid" id="schoolname">
+    <center>
+        <img src="{{ url_for('static',filename='image2/logo1.jpg')}}" height="50px" class="img img-rounded"
+        <h1><b>Lakshan International School</b></h1>
+    </center>
+</div>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand"> Lakshan School</a>
+        </div>
+       <ul class="nav navbar-nav">
+           <li ><a href="/Aboutus">About Us</a></li>
+           <li><a href="/Skilluplift">Skill Upliftment</a></li>
+           <li><a href="/gallery">Photo Gallery</a></li>
+
+       <!__ dropdown Menu ___>
+
+           <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Extra-Curicular
+                   <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+
+                   <li><a href="/indoorgame">Indoor Games</a></li>
+                   <li><a href="/outdoorgames">Outdoorgames</a></li>
+                   <li><a href="/culturalmeets"> Miscellanous</a></li>
+               </ul>
+           </li>
+
+           <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  School
+                   <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+
+                   <li><a href="/Preprimary">Pre-Primary(kinder garten)</a></li>
+                   <li><a href="/primary">Primary (grade I-VIII)</a></li>
+                   <li><a href="/highschool">High School </a></li>
+               </ul>
+           </li>
+
+       </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">Home</a></li>
+
+            <li><a href="/Admin_loginpage">Admin Logout</a></li>
+            <li><a href="/Adminactivities">Admin Activities </a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container" style="margin-top:150px">
+    <div class="col-md-offset-1 col-md-5" >
+
+        <div class="shadow">
+            <form action="/Markregister" method="POST" autocomplete="off">
+                <center><strong> <h1 class="page-header text-info "> Exam Details</h1></strong></center>
+                {% with messages =get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+
+                        {% for category,message in messages %}
+                        <div class="alert alert-{{category}}">Exam Detials of RollNo<strong class="boldme">{{Sroll}}</strong>  {{message}}
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                <div class="form-group">
+                    <label class="size10"> Rollno <span class="mandatory">*</span></label>
+                    <input id="s01" type="number" name="rollno" class="form-control" placeholder="Enter Computer Generated Rollno" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="size10"> Tamil <span class="mandatory">*</span> </label>
+                    <input id="s01" type="number" name="tamil" class="form-control" min="0" max="100" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="size10">English <span class="mandatory">*</span> </label>
+                    <input id="s01" type="number" name="english" class="form-control" min="0" max="100"  required>
+                </div>
+
+                <div class="form-group">
+                    <label class="size10">Maths <span class="mandatory">*</span> </label>
+                    <input id="s01" type="number" name="maths" class="form-control"  min="0" max="100"  required>
+                </div>
+
+                <div class="form-group">
+                    <label class="size10">Science <span class="mandatory">*</span> </label>
+                    <input id="s01" type="number" name="science" class="form-control" min="0" max="100"  required>
+                </div>
+
+                <div class="form-group">
+                    <label class="size10">Social <span class="mandatory">*</span> </label>
+                    <input id="s01" type="text" name="social" class="form-control" min="0" max="100"   required>
+                </div>
+
+
+                <div class="form-group">
+                    <input type="submit" value="submit" class="btn btn-success btn-block btn-lg">
+                    <input type="reset" value="clear" class="btn btn-danger btn-block btn-lg">
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    <div class="col-md-6">
+         <div class="shadow">
+           <ul class="size07">
+               <center>Remember Note</center>
+               <hr class="new1">
+               <li>Exam results of students are need to be added here,with great concentration.</li>
+               <li> This is autogeneration page, enter only the subject marks,neccessary calculation are calculated automatically.</li>
+               <li>Use the <u>computer generated Rollno</u> to enter the student data.</li>
+               <li>Dont share the mark details to anyone, because it is confidential.</li>
+               <li>People below <u>35</u> are considered as Fail in examination. </li>
+           </ul>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+</body>
+</html>
+
+<script>
+    $(document).ready(function() {
+    $('.alert').hide(10000)
+    });
+</script>
